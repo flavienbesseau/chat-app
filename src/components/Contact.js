@@ -1,25 +1,29 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-let Isconnected = true;
-
-const Contact = () => {
+const Contact = (props) => {
   return (
     <div className="Contact">
-      <img
-        src="https://randomuser.me/api/portraits/women/32.jpg"
-        alt="C'est Paula Simpson"
-        className="avatar"
-      ></img>
+      <img src={props.avatar} alt={props.name} className="avatar"></img>
       <div>
-        <p className="name">C'est Paula Simpson</p>
+        <p className="name">{props.name}</p>
 
         <div className="status">
-          <status className="status-online"></status>
-          <p className="status-text">{Isconnected ? "Online" : "Offline"}</p>
+          <i
+            className={props.Isconnected ? 'status-online' : 'status-offline'}
+          ></i>
+          <p className="status-text">
+            {props.Isconnected ? 'Online' : 'Offline'}
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
+Contact.propTypes = {
+  name: PropTypes.string.isRequired,
+  Isconnected: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+};
 export default Contact;
