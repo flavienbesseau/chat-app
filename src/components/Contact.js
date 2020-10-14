@@ -9,12 +9,8 @@ const Contact = (props) => {
         <p className="name">{props.name}</p>
 
         <div className="status">
-          <i
-            className={props.Isconnected ? 'status-online' : 'status-offline'}
-          ></i>
-          <p className="status-text">
-            {props.Isconnected ? 'Online' : 'Offline'}
-          </p>
+          <i className={props.online ? 'status-online' : 'status-offline'}></i>
+          <p className="status-text">{props.online ? 'Online' : 'Offline'}</p>
         </div>
       </div>
     </div>
@@ -23,7 +19,7 @@ const Contact = (props) => {
 
 Contact.propTypes = {
   name: PropTypes.string.isRequired,
-  Isconnected: PropTypes.bool.isRequired,
+  online: PropTypes.bool.isRequired,
   avatar: PropTypes.string.isRequired,
 };
 export default Contact;
