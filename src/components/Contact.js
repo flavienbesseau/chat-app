@@ -9,8 +9,8 @@ const Contact = (props) => {
         <p className="name">{props.name}</p>
 
         <div className="status">
-          <i className={props.online ? "status-online" : "status-offline"}></i>
-          <p className="status-text">{props.online ? "Online" : "Offline"}</p>
+          <i className={props.online ? 'status-online' : 'status-offline'}></i>
+          <p className="status-text">{props.online ? 'Online' : 'Offline'}</p>
         </div>
       </div>
     </div>
@@ -20,6 +20,6 @@ const Contact = (props) => {
 Contact.propTypes = {
   name: PropTypes.string.isRequired,
   online: PropTypes.bool.isRequired,
-  avatar: PropTypes.string.isRequired
+  avatar: PropTypes.string.isRequired,
 };
 export default Contact;
