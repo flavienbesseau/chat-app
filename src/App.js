@@ -1,6 +1,7 @@
 import React from 'react';
 import Contact from './components/Contact.js';
 import './components/Contact.css';
+import ContactList from './components/ContactList.js';
 
 const person1 = {
   Isconnected: true,
@@ -25,6 +26,8 @@ function App() {
       <Contact {...person1} />
       <Contact {...person2} />
       <Contact {...person3} />
+      -------------------------
+      <ContactList />
     </div>
   );
 }
